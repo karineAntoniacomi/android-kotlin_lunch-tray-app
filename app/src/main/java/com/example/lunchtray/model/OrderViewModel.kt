@@ -27,7 +27,9 @@ class OrderViewModel : ViewModel() {
     // Map of menu items
     val menuItems = DataSource.menuItems
 
-    // Default values for item prices
+    // Default values for item prices - usadas para rastrear o item selecionado
+    // anteriormente caso seja trocado antes de passar para a próxima tela (subtotal
+    // é atualizado à medida que o usuário seleciona uma opção)
     private var previousEntreePrice = 0.0
     private var previousSidePrice = 0.0
     private var previousAccompanimentPrice = 0.0
@@ -35,8 +37,11 @@ class OrderViewModel : ViewModel() {
     // Default tax rate
     private val taxRate = 0.08
 
-    // Entree for the order
+    // Entree for the order - variaveis privadas para armazenar a opção selecionada
+    // no momento, acompanhadas de propriedade de apoio pública
     private val _entree = MutableLiveData<MenuItem?>()
+    // A classe MenuItem do objeto LiveData é anulável, pois o usuário
+    // tem a opção de não selecionar todas as opções
     val entree: LiveData<MenuItem?> = _entree
 
     // Side for the order
@@ -65,72 +70,65 @@ class OrderViewModel : ViewModel() {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
-    /**
-     * Set the entree for the order.
-     */
+    /** * Set the entree for the order. */
     fun setEntree(entree: String) {
-        // TODO: if _entree.value is not null, set the previous entree price to the current
-        //  entree price.
+        // TODO: Caso a _entree não seja null, (usuário já selecionou uma entrada, mas mudou de ideia) define
+        //  previousEntreePrice como o preço da current _entree.
 
-        // TODO: if _subtotal.value is not null subtract the previous entree price from the current
-        //  subtotal value. This ensures that we only charge for the currently selected entree.
+        // TODO: se _subtotal.value não for nulo, subtrai o preço de entrada anterior previousEntreePrice do atual
+        //  valor subtotal. Isso garante que se cobra apenas pela entrada atualmente selecionada.
 
-        // TODO: set the current entree value to the menu item corresponding to the passed in string
-        // TODO: update the subtotal to reflect the price of the selected entree.
+        // TODO: define o valor de entrada atual _entree para o item de menu correspondente à string passada para a função,
+        //  Acessa o MenuItem usando menuItems.
+        // TODO: atualiza o subtotal chamando updateSubtotal() e transmite o preço do último prato principal selecionado,
+        //  para refletir o preço da entrada selecionada.
     }
 
-    /**
-     * Set the side for the order.
-     */
+    /** * Set the side for the order. */
     fun setSide(side: String) {
-        // TODO: if _side.value is not null, set the previous side price to the current side price.
+        // TODO: Caso a _entree não seja null, (usuário já selecionou uma entrada, mas mudou de ideia) define
+        //  previousEntreePrice como o preço da current _entree.
 
-        // TODO: if _subtotal.value is not null subtract the previous side price from the current
-        //  subtotal value. This ensures that we only charge for the currently selected side.
+        // TODO: se _subtotal.value não for nulo, subtrai o preço de entrada anterior previousEntreePrice do atual
+        //  valor subtotal. Isso garante que se cobra apenas pela entrada atualmente selecionada.
 
-        // TODO: set the current side value to the menu item corresponding to the passed in string
-        // TODO: update the subtotal to reflect the price of the selected side.
+        // TODO: define o valor de entrada atual _entree para o item de menu correspondente à string passada para a função,
+        //  Acessa o MenuItem usando menuItems.
+        // TODO: atualiza o subtotal chamando updateSubtotal() e transmite o preço do último prato principal selecionado,
+        //  para refletir o preço da entrada selecionada.
     }
 
-    /**
-     * Set the accompaniment for the order.
-     */
+    /** * Set the accompaniment for the order. */
     fun setAccompaniment(accompaniment: String) {
-        // TODO: if _accompaniment.value is not null, set the previous accompaniment price to the
-        //  current accompaniment price.
+        // TODO: se _accompaniment.value não for nulo, defina o preço do acompanhamento anterior para o
+        //  preço atual do acompanhamento.
 
-        // TODO: if _accompaniment.value is not null subtract the previous accompaniment price from
-        //  the current subtotal value. This ensures that we only charge for the currently selected
-        //  accompaniment.
+        // TODO: se _accompaniment.value não for nulo, subtraia o preço do acompanhamento anterior de
+        //  o valor subtotal atual. Isso garante que cobramos apenas pelos itens atualmente selecionados
+        //  acompanhamento.
 
-        // TODO: set the current accompaniment value to the menu item corresponding to the passed in
-        //  string
-        // TODO: update the subtotal to reflect the price of the selected accompaniment.
+        // TODO: define o valor do acompanhamento atual para o item de menu correspondente ao passado corda
+        // TODO: atualiza o subtotal para refletir o preço do acompanhamento selecionado.
     }
 
-    /**
-     * Update subtotal value.
-     */
+    /** * Update subtotal value. */
     private fun updateSubtotal(itemPrice: Double) {
-        // TODO: if _subtotal.value is not null, update it to reflect the price of the recently
-        //  added item.
-        //  Otherwise, set _subtotal.value to equal the price of the item.
+        // TODO: se _subtotal.value não for nulo, atualiza para refletir o preço do último item
+        //  adicionado (adiciona o itemPrice ao _subtotal)
+        //  Caso contrário, defina _subtotal.value para igualar o preço do item.
 
-        // TODO: calculate the tax and resulting total
+        // TODO: calcula o imposto e o total resultante (Chamar calculateTaxAndTotal() depois que
+        //  o _subtotal tiver sido definido/atualizado, para que os valores sejam atualizados refletindo no subtotal)
     }
 
-    /**
-     * Calculate tax and update total.
-     */
+    /** * Calculate tax and update total. */
     fun calculateTaxAndTotal() {
-        // TODO: set _tax.value based on the subtotal and the tax rate.
-        // TODO: set the total based on the subtotal and _tax.value.
+        // TODO: defina _tax.value com base no subtotal e na taxa de imposto. (alíquota multiplicada pelo subtotal)
+        // TODO: define o total com base no subtotal e _tax.value (subtotal mais os tributos)
     }
 
-    /**
-     * Reset all values pertaining to the order.
-     */
+    /** * Reset all values pertaining to the order. Call when the user submits or cancels an order. */
     fun resetOrder() {
-        // TODO: Reset all values associated with an order
+        // TODO: Redefinir para o valor original (0,0 ou nulo) todos os valores associados a um pedido
     }
 }

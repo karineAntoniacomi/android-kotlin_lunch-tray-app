@@ -14,12 +14,19 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
+<!-- Em fragment_entree_menu.xml, na tag <data>, adicione uma variável de vinculação
+  para o EntreeMenuFragment. Para cada botão de opção, será necessário definir o prato
+  principal no ViewModel quando ele for selecionado. O texto da visualização do subtotal
+  precisa ser atualizado corretamente. Você também precisa definir o atributo onClick
+  para cancel_button e next_button para cancelar o pedido ou navegar até a próxima
+  tela, respectivamente.-->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.order.EntreeMenuFragment">
-    
+
     <data>
         <variable
             name="viewModel"

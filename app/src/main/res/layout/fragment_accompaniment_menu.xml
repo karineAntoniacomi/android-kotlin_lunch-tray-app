@@ -14,6 +14,11 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
+<!--Faça o mesmo dos layouts anteriores em fragment_accompaniment_menu.xml com uma
+  variável de vinculação para o AccompanimentMenuFragment, definindo a guarnição quando
+  cada botão de opção for selecionado. Também será necessário definir atributos para o
+  texto do subtotal, o botão "Cancel" e o botão "Next".-->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

@@ -14,6 +14,15 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+
+<!-- No fragment_checkout.xml, você precisará adicionar uma tag <data> para definir
+  variáveis de vinculação. Na tag <data>, adicione duas variáveis de vinculação, uma
+  de OrderViewModel e outra de CheckoutFragment. Nas visualizações de texto, será
+  necessário definir os nomes e preços do prato principal, do acompanhamento e da
+  guarnição selecionados no OrderViewModel. Você também precisará definir o subtotal,
+  os tributos e o total do OrderViewModel. Em seguida, defina onClickAttributes como
+  o horário em que o pedido foi enviado e, caso o pedido seja cancelado, use as
+  funções adequadas do CheckoutFragment. -->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

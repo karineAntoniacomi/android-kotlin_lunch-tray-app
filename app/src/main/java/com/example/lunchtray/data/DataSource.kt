@@ -20,6 +20,7 @@ import com.example.lunchtray.model.MenuItem
 
 /**
  * Map of available menu items to be displayed in the menu fragments.
+ * Objetos MenuItem individuais
  */
 object DataSource {
     val menuItems = mapOf(

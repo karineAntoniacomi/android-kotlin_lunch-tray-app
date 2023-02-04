@@ -18,12 +18,13 @@ package com.example.lunchtray.model
 import java.text.NumberFormat
 
 /**
- * Data class for menu items
+ * Data class for menu items - Todas as opções de pratos que o usuário pode pedir
  */
 data class MenuItem(
     val name: String,
     val description: String,
     val price: Double,
+    //  tipo é representado por número derivado do objeto ItemType (pacote constants)
     val type: Int
 ) {
     /**
