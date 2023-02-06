@@ -1,0 +1,524 @@
+# 2023-02-06T17:29:46.358Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 9
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_start_order_from_checkout"
+    start_time {
+      seconds: 1675704565
+      nanos: 206000000
+    }
+    end_time {
+      seconds: 1675704567
+      nanos: 74000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131230857> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_checkout(NavigationTests.kt:200)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131230857> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_checkout(NavigationTests.kt:200)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_start_order_from_checkout.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_start_order_from_entree_menu"
+    start_time {
+      seconds: 1675704568
+      nanos: 53000000
+    }
+    end_time {
+      seconds: 1675704568
+      nanos: 894000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131230935> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_entree_menu(NavigationTests.kt:83)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131230935> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_entree_menu(NavigationTests.kt:83)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_start_order_from_entree_menu.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_checkout_from_accompaniment_menu"
+    start_time {
+      seconds: 1675704569
+      nanos: 687000000
+    }
+    end_time {
+      seconds: 1675704570
+      nanos: 547000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131230768> but was:<2131230857>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_checkout_from_accompaniment_menu(NavigationTests.kt:182)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131230768> but was:<2131230857>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_checkout_from_accompaniment_menu(NavigationTests.kt:182)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_checkout_from_accompaniment_menu.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_entree_menu_from_start_order"
+    start_time {
+      seconds: 1675704571
+      nanos: 427000000
+    }
+    end_time {
+      seconds: 1675704571
+      nanos: 981000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_entree_menu_from_start_order.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_start_order_from_checkout_via_submit"
+    start_time {
+      seconds: 1675704573
+      nanos: 27000000
+    }
+    end_time {
+      seconds: 1675704574
+      nanos: 499000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131230857> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_checkout_via_submit(NavigationTests.kt:218)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131230857> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_checkout_via_submit(NavigationTests.kt:218)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_start_order_from_checkout_via_submit.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_start_order_from_accompaniment_menu"
+    start_time {
+      seconds: 1675704575
+      nanos: 485000000
+    }
+    end_time {
+      seconds: 1675704576
+      nanos: 240000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131230768> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_accompaniment_menu(NavigationTests.kt:163)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131230768> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_accompaniment_menu(NavigationTests.kt:163)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_start_order_from_accompaniment_menu.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_accompaniment_menu_from_side_menu"
+    start_time {
+      seconds: 1675704577
+      nanos: 195000000
+    }
+    end_time {
+      seconds: 1675704578
+      nanos: 490000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131231170> but was:<2131230768>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_accompaniment_menu_from_side_menu(NavigationTests.kt:144)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131231170> but was:<2131230768>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_accompaniment_menu_from_side_menu(NavigationTests.kt:144)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_accompaniment_menu_from_side_menu.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_start_order_from_side_menu"
+    start_time {
+      seconds: 1675704579
+      nanos: 813000000
+    }
+    end_time {
+      seconds: 1675704581
+      nanos: 591000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131231170> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_side_menu(NavigationTests.kt:126)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131231170> but was:<2131231205>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_start_order_from_side_menu(NavigationTests.kt:126)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_start_order_from_side_menu.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "NavigationTests"
+    test_package: "com.example.lunchtray"
+    test_method: "navigate_to_side_menu_from_entree_menu"
+    start_time {
+      seconds: 1675704582
+      nanos: 520000000
+    }
+    end_time {
+      seconds: 1675704583
+      nanos: 912000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<2131230935> but was:<2131231170>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_side_menu_from_entree_menu(NavigationTests.kt:108)"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<2131230935> but was:<2131231170>\nat org.junit.Assert.fail(Assert.java:88)\nat org.junit.Assert.failNotEquals(Assert.java:834)\nat org.junit.Assert.assertEquals(Assert.java:118)\nat org.junit.Assert.assertEquals(Assert.java:144)\nat com.example.lunchtray.NavigationTests.navigate_to_side_menu_from_entree_menu(NavigationTests.kt:108)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/logcat-com.example.lunchtray.NavigationTests-navigate_to_side_menu_from_entree_menu.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/karineas/AndroidStudioProjects/android-basics-kotlin-lunch-tray-app-main/app/build/outputs/androidTest-results/connected/Galaxy_Nexus_API_30(AVD) - 11/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
