@@ -43,7 +43,7 @@ public final class EntreeMenuFragment extends androidx.fragment.app.Fragment {
     }
     
     /**
-     * Navigate to the side menu fragment.
+     * * Navigate to the side menu fragment
      */
     public final void goToNextScreen() {
     }

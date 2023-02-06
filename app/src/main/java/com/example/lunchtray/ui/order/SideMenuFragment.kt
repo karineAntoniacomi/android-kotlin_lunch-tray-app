@@ -21,6 +21,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentSideMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
@@ -57,15 +59,15 @@ class SideMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the SideMenuFragment variables
+            // initialize the SideMenuFragment variables
+            sideFragment = this@SideMenuFragment
         }
     }
 
-    /**
-     * Navigate to the accompaniments menu fragment
-     */
+    /** * Navigate to the accompaniments menu fragment */
     fun goToNextScreen() {
-        // TODO: Navigate to the AccompanimentMenuFragment
+        // Navigate to the AccompanimentMenuFragment
+        findNavController().navigate(R.id.action_sideMenuFragment_to_accompanimentMenuFragment)
     }
 
     /**
