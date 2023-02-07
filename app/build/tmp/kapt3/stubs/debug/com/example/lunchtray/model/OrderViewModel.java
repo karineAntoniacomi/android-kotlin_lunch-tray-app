@@ -69,40 +69,40 @@ public final class OrderViewModel extends androidx.lifecycle.ViewModel {
     }
     
     /**
-     * Set the entree for the order.
+     * * Set the entree for the order
      */
     public final void setEntree(@org.jetbrains.annotations.NotNull()
     java.lang.String entree) {
     }
     
     /**
-     * Set the side for the order.
+     * * Set the side for the order.
      */
     public final void setSide(@org.jetbrains.annotations.NotNull()
     java.lang.String side) {
     }
     
     /**
-     * Set the accompaniment for the order.
+     * * Set the accompaniment for the order.
      */
     public final void setAccompaniment(@org.jetbrains.annotations.NotNull()
     java.lang.String accompaniment) {
     }
     
     /**
-     * Update subtotal value.
+     * * Update subtotal value.
      */
     private final void updateSubtotal(double itemPrice) {
     }
     
     /**
-     * Calculate tax and update total.
+     * * Calculate tax and update total.
      */
     public final void calculateTaxAndTotal() {
     }
     
     /**
-     * Reset all values pertaining to the order.
+     * * Reset all values pertaining to the order. Call when the user submits or cancels an order.
      */
     public final void resetOrder() {
     }

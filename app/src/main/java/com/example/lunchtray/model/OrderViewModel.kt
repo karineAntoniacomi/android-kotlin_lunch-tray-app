@@ -48,7 +48,7 @@ class OrderViewModel : ViewModel() {
     private val _side = MutableLiveData<MenuItem?>()
     val side: LiveData<MenuItem?> = _side
 
-    // Accompaniment for the order.
+    // Accompaniment for the order
     private val _accompaniment = MutableLiveData<MenuItem?>()
     val accompaniment: LiveData<MenuItem?> = _accompaniment
 
@@ -70,13 +70,19 @@ class OrderViewModel : ViewModel() {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
-    /** * Set the entree for the order. */
+    /** * Set the entree for the order */
     fun setEntree(entree: String) {
         // TODO: Caso a _entree não seja null, (usuário já selecionou uma entrada, mas mudou de ideia) define
         //  previousEntreePrice como o preço da current _entree.
-
+//        if(_entree.value != null){
+//            entree = previousEntreePrice
+//        }
         // TODO: se _subtotal.value não for nulo, subtrai o preço de entrada anterior previousEntreePrice do atual
         //  valor subtotal. Isso garante que se cobra apenas pela entrada atualmente selecionada.
+        if(_subtotal.value != null) {
+            previousEntreePrice
+
+        }
 
         // TODO: define o valor de entrada atual _entree para o item de menu correspondente à string passada para a função,
         //  Acessa o MenuItem usando menuItems.
