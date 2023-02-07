@@ -27,9 +27,7 @@ import com.example.lunchtray.databinding.FragmentCheckoutBinding
 import com.example.lunchtray.model.OrderViewModel
 import com.google.android.material.snackbar.Snackbar
 
-/**
- * [CheckoutFragment] allows people to apply a coupon to their order, submit order, or cancel order.
- */
+/** * [CheckoutFragment] allows people to apply a coupon to their order, submit or cancel order */
 class CheckoutFragment : Fragment() {
 
     // Binding object instance corresponding to the fragment_start_order.xml layout
@@ -69,9 +67,7 @@ class CheckoutFragment : Fragment() {
         }
     }
 
-    /**
-     * Cancel the order and start over.
-     */
+    /** * Cancel the order and start over */
     fun cancelOrder() {
         // Reset order in view model
         sharedViewModel.resetOrder()

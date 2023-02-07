@@ -140,7 +140,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tax"
                 tools:text="Total: $10.73"/>
 
-            <!-- TODO: submit the order when clicked -->
+            <!-- onClick: submit the order when clicked -->
             <Button
                 android:id="@+id/submit_button"
                 android:layout_width="match_parent"
@@ -152,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@id/total"
                 android:tag="binding_1"                                   />
 
-            <!-- TODO: cancel the order when clicked -->
+            <!-- onClick: cancel the order when clicked -->
             <Button
                 android:id="@+id/cancel_button"
                 style="?attr/materialButtonOutlinedStyle"

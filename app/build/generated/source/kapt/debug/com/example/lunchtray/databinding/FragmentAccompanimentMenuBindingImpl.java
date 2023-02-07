@@ -14,15 +14,16 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.accompaniment_options, 11);
-        sViewsWithIds.put(R.id.divider, 12);
-        sViewsWithIds.put(R.id.subtotal, 13);
-        sViewsWithIds.put(R.id.cancel_button, 14);
+        sViewsWithIds.put(R.id.accompaniment_options, 12);
+        sViewsWithIds.put(R.id.divider, 13);
+        sViewsWithIds.put(R.id.subtotal, 14);
     }
     // views
     @NonNull
     private final android.widget.ScrollView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback2;
     @Nullable
     private final android.view.View.OnClickListener mCallback1;
     // values
@@ -34,20 +35,20 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     }
     private FragmentAccompanimentMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.RadioGroup) bindings[11]
+            , (android.widget.RadioGroup) bindings[12]
             , (android.widget.RadioButton) bindings[4]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[6]
             , (android.widget.RadioButton) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.Button) bindings[14]
-            , (android.view.View) bindings[12]
             , (android.widget.Button) bindings[10]
+            , (android.view.View) bindings[13]
+            , (android.widget.Button) bindings[11]
             , (android.widget.RadioButton) bindings[7]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[9]
-            , (android.widget.TextView) bindings[13]
+            , (android.widget.TextView) bindings[14]
             );
         this.berries.setTag(null);
         this.berriesDescription.setTag(null);
@@ -55,6 +56,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         this.bread.setTag(null);
         this.breadDescription.setTag(null);
         this.breadPrice.setTag(null);
+        this.cancelButton.setTag(null);
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.nextButton.setTag(null);
@@ -63,6 +65,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         this.picklesPrice.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback2 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
         mCallback1 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
@@ -209,25 +212,48 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.nextButton.setOnClickListener(mCallback1);
+            this.cancelButton.setOnClickListener(mCallback1);
+            this.nextButton.setOnClickListener(mCallback2);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // accompanimentFragment
-        com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentFragment = mAccompanimentFragment;
-        // accompanimentFragment != null
-        boolean accompanimentFragmentJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // accompanimentFragment
+                com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentFragment = mAccompanimentFragment;
+                // accompanimentFragment != null
+                boolean accompanimentFragmentJavaLangObjectNull = false;
 
 
 
-        accompanimentFragmentJavaLangObjectNull = (accompanimentFragment) != (null);
-        if (accompanimentFragmentJavaLangObjectNull) {
+                accompanimentFragmentJavaLangObjectNull = (accompanimentFragment) != (null);
+                if (accompanimentFragmentJavaLangObjectNull) {
 
 
-            accompanimentFragment.goToNextScreen();
+                    accompanimentFragment.goToNextScreen();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // accompanimentFragment
+                com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentFragment = mAccompanimentFragment;
+                // accompanimentFragment != null
+                boolean accompanimentFragmentJavaLangObjectNull = false;
+
+
+
+                accompanimentFragmentJavaLangObjectNull = (accompanimentFragment) != (null);
+                if (accompanimentFragmentJavaLangObjectNull) {
+
+
+                    accompanimentFragment.cancelOrder();
+                }
+                break;
+            }
         }
     }
     // dirty flag

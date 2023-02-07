@@ -26,9 +26,7 @@ import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentSideMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
-/**
- * [SideMenuFragment] allows people to add a side to the order or cancel the order.
- */
+/** * [SideMenuFragment] allows people to add a side to the order or cancel the order */
 class SideMenuFragment : Fragment() {
 
     // Binding object instance corresponding to the fragment_start_order.xml layout
@@ -70,12 +68,13 @@ class SideMenuFragment : Fragment() {
         findNavController().navigate(R.id.action_sideMenuFragment_to_accompanimentMenuFragment)
     }
 
-    /**
-     * Cancel the order and start over.
-     */
+    /** * Cancel the order and start over */
     fun cancelOrder() {
-        // TODO: Reset order in view model
-        // TODO: Navigate back to the [StartFragment] to start over
+        // Reset order in view model
+        sharedViewModel.resetOrder()
+
+        // Navigate back to the [StartFragment] to start over
+        findNavController().navigate(R.id.action_sideMenuFragment_to_startOrderFragment)
     }
 
     /**

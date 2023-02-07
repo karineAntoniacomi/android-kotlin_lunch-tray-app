@@ -14,17 +14,18 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.side_options, 14);
-        sViewsWithIds.put(R.id.divider, 15);
-        sViewsWithIds.put(R.id.subtotal, 16);
-        sViewsWithIds.put(R.id.cancel_button, 17);
+        sViewsWithIds.put(R.id.side_options, 15);
+        sViewsWithIds.put(R.id.divider, 16);
+        sViewsWithIds.put(R.id.subtotal, 17);
     }
     // views
     @NonNull
     private final android.widget.ScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback6;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -34,9 +35,9 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     }
     private FragmentSideMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[17]
-            , (android.view.View) bindings[15]
             , (android.widget.Button) bindings[13]
+            , (android.view.View) bindings[16]
+            , (android.widget.Button) bindings[14]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[9]
             , (android.widget.RadioButton) bindings[7]
@@ -46,12 +47,13 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
             , (android.widget.RadioButton) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.RadioGroup) bindings[14]
+            , (android.widget.RadioGroup) bindings[15]
             , (android.widget.RadioButton) bindings[4]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[6]
-            , (android.widget.TextView) bindings[16]
+            , (android.widget.TextView) bindings[17]
             );
+        this.cancelButton.setTag(null);
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.nextButton.setTag(null);
@@ -69,7 +71,8 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         this.soupPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -216,7 +219,8 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.nextButton.setOnClickListener(mCallback4);
+            this.cancelButton.setOnClickListener(mCallback5);
+            this.nextButton.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
@@ -238,19 +242,41 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // sideFragment != null
-        boolean sideFragmentJavaLangObjectNull = false;
-        // sideFragment
-        com.example.lunchtray.ui.order.SideMenuFragment sideFragment = mSideFragment;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // sideFragment != null
+                boolean sideFragmentJavaLangObjectNull = false;
+                // sideFragment
+                com.example.lunchtray.ui.order.SideMenuFragment sideFragment = mSideFragment;
 
 
 
-        sideFragmentJavaLangObjectNull = (sideFragment) != (null);
-        if (sideFragmentJavaLangObjectNull) {
+                sideFragmentJavaLangObjectNull = (sideFragment) != (null);
+                if (sideFragmentJavaLangObjectNull) {
 
 
-            sideFragment.goToNextScreen();
+                    sideFragment.goToNextScreen();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // sideFragment != null
+                boolean sideFragmentJavaLangObjectNull = false;
+                // sideFragment
+                com.example.lunchtray.ui.order.SideMenuFragment sideFragment = mSideFragment;
+
+
+
+                sideFragmentJavaLangObjectNull = (sideFragment) != (null);
+                if (sideFragmentJavaLangObjectNull) {
+
+
+                    sideFragment.cancelOrder();
+                }
+                break;
+            }
         }
     }
     // dirty flag

@@ -14,17 +14,18 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.entree_options, 14);
-        sViewsWithIds.put(R.id.divider, 15);
-        sViewsWithIds.put(R.id.subtotal, 16);
-        sViewsWithIds.put(R.id.cancel_button, 17);
+        sViewsWithIds.put(R.id.entree_options, 15);
+        sViewsWithIds.put(R.id.divider, 16);
+        sViewsWithIds.put(R.id.subtotal, 17);
     }
     // views
     @NonNull
     private final android.widget.ScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback8;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -34,24 +35,25 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
     }
     private FragmentEntreeMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[17]
+            , (android.widget.Button) bindings[13]
             , (android.widget.RadioButton) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
             , (android.widget.RadioButton) bindings[4]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[6]
-            , (android.view.View) bindings[15]
-            , (android.widget.RadioGroup) bindings[14]
-            , (android.widget.Button) bindings[13]
+            , (android.view.View) bindings[16]
+            , (android.widget.RadioGroup) bindings[15]
+            , (android.widget.Button) bindings[14]
             , (android.widget.RadioButton) bindings[7]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[9]
             , (android.widget.RadioButton) bindings[10]
             , (android.widget.TextView) bindings[11]
             , (android.widget.TextView) bindings[12]
-            , (android.widget.TextView) bindings[16]
+            , (android.widget.TextView) bindings[17]
             );
+        this.cancelButton.setTag(null);
         this.cauliflower.setTag(null);
         this.cauliflowerDescription.setTag(null);
         this.cauliflowerPrice.setTag(null);
@@ -69,7 +71,8 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
         this.skilletPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
+        mCallback7 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -213,6 +216,12 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.cancelButton.setOnClickListener(mCallback7);
+            this.nextButton.setOnClickListener(mCallback8);
+        }
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
@@ -229,28 +238,45 @@ public class FragmentEntreeMenuBindingImpl extends FragmentEntreeMenuBinding imp
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.skilletDescription, viewModelMenuItemsSkilletDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.skilletPrice, viewModelMenuItemsSkilletGetFormattedPrice);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
-
-            this.nextButton.setOnClickListener(mCallback5);
-        }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // entreeFragment != null
-        boolean entreeFragmentJavaLangObjectNull = false;
-        // entreeFragment
-        com.example.lunchtray.ui.order.EntreeMenuFragment entreeFragment = mEntreeFragment;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // entreeFragment != null
+                boolean entreeFragmentJavaLangObjectNull = false;
+                // entreeFragment
+                com.example.lunchtray.ui.order.EntreeMenuFragment entreeFragment = mEntreeFragment;
 
 
 
-        entreeFragmentJavaLangObjectNull = (entreeFragment) != (null);
-        if (entreeFragmentJavaLangObjectNull) {
+                entreeFragmentJavaLangObjectNull = (entreeFragment) != (null);
+                if (entreeFragmentJavaLangObjectNull) {
 
 
-            entreeFragment.goToNextScreen();
+                    entreeFragment.goToNextScreen();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // entreeFragment != null
+                boolean entreeFragmentJavaLangObjectNull = false;
+                // entreeFragment
+                com.example.lunchtray.ui.order.EntreeMenuFragment entreeFragment = mEntreeFragment;
+
+
+
+                entreeFragmentJavaLangObjectNull = (entreeFragment) != (null);
+                if (entreeFragmentJavaLangObjectNull) {
+
+
+                    entreeFragment.cancelOrder();
+                }
+                break;
+            }
         }
     }
     // dirty flag

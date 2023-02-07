@@ -33,7 +33,7 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
     @Nullable
     private final android.view.View.OnClickListener mCallback3;
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -63,8 +63,8 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         this.submitButton.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
-        mCallback2 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -132,31 +132,14 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.cancelButton.setOnClickListener(mCallback3);
-            this.submitButton.setOnClickListener(mCallback2);
+            this.cancelButton.setOnClickListener(mCallback4);
+            this.submitButton.setOnClickListener(mCallback3);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // checkoutFragment != null
-                boolean checkoutFragmentJavaLangObjectNull = false;
-                // checkoutFragment
-                com.example.lunchtray.ui.order.CheckoutFragment checkoutFragment = mCheckoutFragment;
-
-
-
-                checkoutFragmentJavaLangObjectNull = (checkoutFragment) != (null);
-                if (checkoutFragmentJavaLangObjectNull) {
-
-
-                    checkoutFragment.cancelOrder();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // checkoutFragment != null
@@ -171,6 +154,23 @@ public class FragmentCheckoutBindingImpl extends FragmentCheckoutBinding impleme
 
 
                     checkoutFragment.submitOrder();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // checkoutFragment != null
+                boolean checkoutFragmentJavaLangObjectNull = false;
+                // checkoutFragment
+                com.example.lunchtray.ui.order.CheckoutFragment checkoutFragment = mCheckoutFragment;
+
+
+
+                checkoutFragmentJavaLangObjectNull = (checkoutFragment) != (null);
+                if (checkoutFragmentJavaLangObjectNull) {
+
+
+                    checkoutFragment.cancelOrder();
                 }
                 break;
             }

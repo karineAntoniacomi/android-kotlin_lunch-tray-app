@@ -26,10 +26,8 @@ import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentAccompanimentMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
-/**
- * [AccompanimentMenuFragment] allows people to add an accompaniment to their order or cancel the
- * order.
- */
+/** * [AccompanimentMenuFragment] allows people to add an accompaniment to their order or cancel the
+ * order */
 class AccompanimentMenuFragment : Fragment() {
 
     // Binding object instance corresponding to the fragment_start_order.xml layout
@@ -65,20 +63,19 @@ class AccompanimentMenuFragment : Fragment() {
         }
     }
 
-    /**
-     * Navigate to the checkout fragment.
-     */
+    /** * Navigate to the checkout fragment */
     fun goToNextScreen() {
         // Navigate to the CheckoutFragment
         findNavController().navigate(R.id.action_accompanimentMenuFragment_to_checkoutFragment)
     }
 
-    /**
-     * Cancel the order and start over.
-     */
+    /** * Cancel the order and start over */
     fun cancelOrder() {
-        // TODO: Reset order in view model
-        // TODO: Navigate back to the [StartFragment] to start over
+        // Reset order in view model
+        sharedViewModel.resetOrder()
+
+        // Navigate back to the [StartFragment] to start over
+        findNavController().navigate(R.id.action_accompanimentMenuFragment_to_startOrderFragment)
     }
 
     /**
