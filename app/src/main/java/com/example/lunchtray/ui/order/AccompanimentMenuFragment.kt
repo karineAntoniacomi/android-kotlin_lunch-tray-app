@@ -26,8 +26,7 @@ import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentAccompanimentMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
-/** * [AccompanimentMenuFragment] allows people to add an accompaniment to their order or cancel the
- * order */
+/** * [AccompanimentMenuFragment] allows people to add an accompaniment to their order or cancel the order */
 class AccompanimentMenuFragment : Fragment() {
 
     // Binding object instance corresponding to the fragment_start_order.xml layout
@@ -78,10 +77,8 @@ class AccompanimentMenuFragment : Fragment() {
         findNavController().navigate(R.id.action_accompanimentMenuFragment_to_startOrderFragment)
     }
 
-    /**
-     * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object.
-     */
+    /** * This fragment lifecycle method is called when the view hierarchy associated with the fragment
+     * is being removed. As a result, clear out the binding object */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

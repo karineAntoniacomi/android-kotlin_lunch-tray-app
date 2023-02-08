@@ -18,6 +18,7 @@ package com.example.lunchtray
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.lunchtray.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -34,5 +35,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // TODO: Retrieve NavController from the NavHostFragment
+        // Set up the action bar for use with the NavController
+        setupActionBarWithNavController(navController)
+    }
+    /** * Handle navigation when the user chooses up from the action bar */
+    fun onSupporNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

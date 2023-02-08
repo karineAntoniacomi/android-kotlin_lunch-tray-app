@@ -24,9 +24,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentStartOrderBinding
 
-/**
- * [StartOrderFragment] allows people to click the start button to start an order.
- */
+/** * [StartOrderFragment] allows people to click the start button to start an order */
 class StartOrderFragment : Fragment() {
 
     // Binding object instance corresponding to the fragment_start_order.xml layout
@@ -53,10 +51,8 @@ class StartOrderFragment : Fragment() {
         return root
     }
 
-    /**
-     * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object.
-     */
+    /** * This fragment lifecycle method is called when the view hierarchy associated with the fragment
+     * is being removed. As a result, clear out the binding object */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

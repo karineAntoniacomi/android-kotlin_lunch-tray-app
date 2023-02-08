@@ -17,9 +17,7 @@ package com.example.lunchtray.model
 
 import java.text.NumberFormat
 
-/**
- * Data class for menu items - Todas as opções de pratos que o usuário pode pedir
- */
+/** * Data class for menu items - Todas as opções de pratos que o usuário pode pedir */
 data class MenuItem(
     val name: String,
     val description: String,
@@ -27,9 +25,6 @@ data class MenuItem(
     //  tipo é representado por número derivado do objeto ItemType (pacote constants)
     val type: Int
 ) {
-    /**
-     * Getter method for price.
-     * Includes formatting.
-     */
+    /** * Getter method for price. Includes formatting */
     fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance().format(price)
 }

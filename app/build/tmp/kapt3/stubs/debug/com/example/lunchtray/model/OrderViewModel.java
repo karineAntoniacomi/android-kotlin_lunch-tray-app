@@ -76,7 +76,7 @@ public final class OrderViewModel extends androidx.lifecycle.ViewModel {
     }
     
     /**
-     * * Set the side for the order.
+     * * Set the side for the order
      */
     public final void setSide(@org.jetbrains.annotations.NotNull()
     java.lang.String side) {
