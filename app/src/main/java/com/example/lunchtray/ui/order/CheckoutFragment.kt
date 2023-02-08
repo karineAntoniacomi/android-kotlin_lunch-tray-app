@@ -64,6 +64,9 @@ class CheckoutFragment : Fragment() {
 
             // initialize the OrderViewModel and CheckoutFragment variables
             checkoutFragment = this@CheckoutFragment
+
+            // inicializa variavel viewModel definida no xml
+            viewModel = sharedViewModel
         }
     }
 
@@ -88,7 +91,7 @@ class CheckoutFragment : Fragment() {
     }
 
     /** * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object */
+    is being removed. As a result, clear out the binding object */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
