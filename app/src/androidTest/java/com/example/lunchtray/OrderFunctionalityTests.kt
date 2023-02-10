@@ -35,14 +35,11 @@ import org.junit.runner.RunWith
 @LargeTest
 class OrderFunctionalityTests : BaseTest() {
 
-    /**
-     * Test subtotal in [EntreeMenuFragment]
-     *
+    /** * Test subtotal in [EntreeMenuFragment]
      * It isn't necessarily best practice to make all these assertions in a single test,
-     * however, it is done here for improved readability of the file.
-     */
+     * however, it is done here for improved readability of the file. */
     @Test
-    fun `radio_buttons_update_entree_menu_subtotal`() {
+    fun radio_buttons_update_entree_menu_subtotal() {
         // Launch the entree menu fragment
         launchFragmentInContainer<EntreeMenuFragment>(themeResId = R.style.Theme_LunchTray)
 
@@ -67,14 +64,11 @@ class OrderFunctionalityTests : BaseTest() {
             .check(matches(withText(containsString("Subtotal: $5.50"))))
     }
 
-    /**
-     * Test subtotal in [SideMenuFragment]
-     *
+    /** * Test subtotal in [SideMenuFragment]
      * It isn't necessarily best practice to make all these assertions in a single test,
-     * however, it is done here for improved readability of the file.
-     */
+     * however, it is done here for improved readability of the file. */
     @Test
-    fun `radio_buttons_update_side_menu_subtotal`() {
+    fun radio_buttons_update_side_menu_subtotal() {
         // Launch the side menu fragment
         launchFragmentInContainer<SideMenuFragment>(themeResId = R.style.Theme_LunchTray)
 
@@ -99,14 +93,11 @@ class OrderFunctionalityTests : BaseTest() {
             .check(matches(withText(containsString("Subtotal: $1.50"))))
     }
 
-    /**
-     * Test subtotal in [AccompanimentMenuFragment]
-     *
+    /** * Test subtotal in [AccompanimentMenuFragment]
      * It isn't necessarily best practice to make all these assertions in a single test,
-     * however, it is done here for improved readability of the file.
-     */
+     * however, it is done here for improved readability of the file. */
     @Test
-    fun `radio_buttons_update_accompaniment_menu_subtotal`() {
+    fun radio_buttons_update_accompaniment_menu_subtotal() {
         // Launch the side menu fragment
         launchFragmentInContainer<AccompanimentMenuFragment>(themeResId = R.style.Theme_LunchTray)
 
@@ -126,11 +117,9 @@ class OrderFunctionalityTests : BaseTest() {
             .check(matches(withText(containsString("Subtotal: $0.50"))))
     }
 
-    /**
-     * Test subtotals in full order flow
-     */
+    /** * Test subtotals in full order flow */
     @Test
-    fun `subtotal_updates_in_full_order_flow`() {
+    fun subtotal_updates_in_full_order_flow() {
         // Launch the main activity
         launchActivity<MainActivity>()
         // Start order
@@ -160,11 +149,9 @@ class OrderFunctionalityTests : BaseTest() {
             .check(matches(withText(containsString("Subtotal: $10.00"))))
     }
 
-    /**
-     * Test subtotal, tax, and total in [CheckoutFragment]
-     */
+    /** * Test subtotal, tax, and total in [CheckoutFragment] */
     @Test
-    fun `subtotal_tax_total_in_checkout`() {
+    fun subtotal_tax_total_in_checkout() {
         // Select items and move to checkout
         fullOrderFlow()
         // Check subtotal. Note that this is already done in a separate test, but the other values
@@ -179,11 +166,9 @@ class OrderFunctionalityTests : BaseTest() {
             .check(matches(withText(containsString("Total: $10.80"))))
     }
 
-    /**
-     * Test that the order is reset after canceling in [EntreeMenuFragment]
-     */
+    /** * Test that the order is reset after canceling in [EntreeMenuFragment] */
     @Test
-    fun `order_reset_after_cancel_from_entree_menu`() {
+    fun order_reset_after_cancel_from_entree_menu() {
         // Launch the app
         launchActivity<MainActivity>()
         // Start the order
@@ -198,11 +183,9 @@ class OrderFunctionalityTests : BaseTest() {
         onView(withText("Subtotal: $0.00")).check(matches(isDisplayed()))
     }
 
-    /**
-     * Test that the order is reset after canceling in [SideMenuFragment]
-     */
+    /** * Test that the order is reset after canceling in [SideMenuFragment] */
     @Test
-    fun `order_reset_after_cancel_from_side_menu`() {
+    fun order_reset_after_cancel_from_side_menu() {
         // Launch the app
         launchActivity<MainActivity>()
         // Start the order
@@ -221,11 +204,9 @@ class OrderFunctionalityTests : BaseTest() {
         onView(withText("Subtotal: $0.00")).check(matches(isDisplayed()))
     }
 
-    /**
-     * Test that the order is reset after canceling in [AccompanimentMenuFragment]
-     */
+    /** * Test that the order is reset after canceling in [AccompanimentMenuFragment] */
     @Test
-    fun `order_reset_after_cancel_from_accompaniment_menu`() {
+    fun order_reset_after_cancel_from_accompaniment_menu() {
         // Launch the app
         launchActivity<MainActivity>()
         // Start the order
@@ -248,11 +229,9 @@ class OrderFunctionalityTests : BaseTest() {
         onView(withText("Subtotal: $0.00")).check(matches(isDisplayed()))
     }
 
-    /**
-     * Test that the order is reset after canceling in [CheckoutFragment]
-     */
+    /** * Test that the order is reset after canceling in [CheckoutFragment] */
     @Test
-    fun `order_reset_after_cancel_from_checkout`() {
+    fun order_reset_after_cancel_from_checkout() {
         // Select items and move to checkout
         fullOrderFlow()
         // Cancel the order
@@ -263,11 +242,9 @@ class OrderFunctionalityTests : BaseTest() {
         onView(withText("Subtotal: $0.00")).check(matches(isDisplayed()))
     }
 
-    /**
-     * Test that the correct snackbar is displayed when order is submitted
-     */
+    /** * Test that the correct snackbar is displayed when order is submitted */
     @Test
-    fun `order_snackbar`() {
+    fun order_snackbar() {
         // Select items and move to checkout
         fullOrderFlow()
         // Click submit

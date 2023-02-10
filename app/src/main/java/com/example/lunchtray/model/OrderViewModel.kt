@@ -40,6 +40,7 @@ class OrderViewModel : ViewModel() {
     // Entree for the order - variaveis privadas para armazenar a opção selecionada
     // no momento, acompanhadas de propriedade de apoio pública
     private val _entree = MutableLiveData<MenuItem?>()
+
     // A classe MenuItem do objeto LiveData é anulável, pois o usuário
     // tem a opção de não selecionar todas as opções
     val entree: LiveData<MenuItem?> = _entree
@@ -114,12 +115,12 @@ class OrderViewModel : ViewModel() {
     fun setAccompaniment(accompaniment: String) {
         /* Se _accompaniment.value não for nulo, defina o preço do acompanhamento anterior
         para o preço atual do acompanhamento */
-       previousAccompanimentPrice = _accompaniment.value?.price ?: 0.0
+        previousAccompanimentPrice = _accompaniment.value?.price ?: 0.0
 
         /* Se _accompaniment.value não for nulo, subtraia o preço do acompanhamento anterior
          de o valor subtotal atual. Isso garante que cobramos apenas pelos itens atualmente
         selecionados acompanhamento */
-       _subtotal.value = (_subtotal.value ?: 0.0) - previousAccompanimentPrice
+        _subtotal.value = (_subtotal.value ?: 0.0) - previousAccompanimentPrice
 
         /* Define o valor do acompanhamento atual para o item de menu correspondente ao
         passado corda */
@@ -134,7 +135,7 @@ class OrderViewModel : ViewModel() {
         /* Se _subtotal.value não for nulo, atualiza para refletir o preço do último
         item adicionado (adiciona o itemPrice ao _subtotal). Caso contrário, defina
         _subtotal.value para igualar o preço do item */
-        if(_subtotal.value != null) {
+        if (_subtotal.value != null) {
             // plus contém os elementos da coleção original e (+) do segundo operando
             _subtotal.value = (_subtotal.value)?.plus(itemPrice)
         } else {
@@ -159,6 +160,15 @@ class OrderViewModel : ViewModel() {
 
     /** * Reset all values pertaining to the order. Call when the user submits or cancels an order. */
     fun resetOrder() {
-        // TODO: Redefinir para o valor original (0,0 ou nulo) todos os valores associados a um pedido
+        // Redefine para o valor original (0,0 ou nulo) todos os valores associados a um pedido
+        previousEntreePrice = 0.0
+        previousSidePrice = 0.0
+        previousAccompanimentPrice = 0.0
+        _entree.value = null
+        _side.value = null
+        _accompaniment.value = null
+        _subtotal.value = 0.0
+        _total.value = 0.0
+        _tax.value = 0.0
     }
 }
